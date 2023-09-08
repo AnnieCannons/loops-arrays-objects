@@ -33,9 +33,12 @@ let magazines = [
 ];
 
 
+for (let i = 0; i<magazines.length; i+=1) {
+  magazineEditors[i]=magazines[i].editor.split(',').join(',');
+ 
+}
 
-
-
+console.log(magazineEditors)
 
 /********************** Exercise 2 ***********************/
 
@@ -80,10 +83,11 @@ let movieTheater = [
 
 // Loop through this collection to log to the console all of the theaters that are playing a comedy.
 
-
-
-
-
+for (let i=0; i<movieTheater.length; i++) {
+  let collection = [movieTheater[i].theater , movieTheater[i].genre]
+  if (collection[1]==='Comedy'){
+ console.log(collection[0]);}
+}
 
 /********************** Exercise 3 ***********************/
 
@@ -91,10 +95,13 @@ let arrayNumbers = [0, 7, 10, 12, 13, 20, 23, 27, 30, 60, 67, 88];
 
 // Loop through each of the elements in the array and only console log the numbers that are divisible by 10.
 
+//console.log(arrayNumbers)
 
-
-
-
+for(let i=0; i<arrayNumbers.length; i++) {
+  if(arrayNumbers[i]%10 === 0){
+    console.log(arrayNumbers[i])
+  }
+}
 
 /********************** Exercise 4 ***********************/
 
@@ -111,11 +118,14 @@ let arrayWords = [
   "question.",
 ];
 
-// Use a loop to log this to the console as one string.
+//Use a loop to log this to the console as one string.
 
+let sentence = []
 
-
-
+for (let i=0; i<arrayWords[i].length; i++) {
+  arrayWords+=arrayWords[i].split(',').join('')
+  console.log(arrayWords)
+}
 
 
 /********************** BONUS EXERCISES ***********************/
@@ -157,7 +167,7 @@ let eventSchedule = {
   Sunday: "Rest and relaxation day",
 };
 
-console.log("Weekly Event Schedule\n");
+//console.log("Weekly Event Schedule\n");
 
 // Log the schedule for each day of the week.
 

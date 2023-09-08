@@ -120,13 +120,16 @@ let arrayWords = [
 
 //Use a loop to log this to the console as one string.
 
-let sentence = []
+let sentence= ""
 
-for (let i=0; i<arrayWords[i].length; i++) {
-  arrayWords+=arrayWords[i].split(',').join('')
-  console.log(arrayWords)
+for (let i=0; i<arrayWords.length; i++) {
+  sentence+=arrayWords[i]
+  if( i < arrayWords.length -1) {
+    sentence += ' '
+  }
+
 }
-
+console.log(sentence)
 
 /********************** BONUS EXERCISES ***********************/
 

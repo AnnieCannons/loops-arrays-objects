@@ -82,13 +82,14 @@ let movieTheater = [
 ];
 
 // Loop through this collection to log to the console all of the theaters that are playing a comedy.
+let collection;
 
 for (let i=0; i<movieTheater.length; i++) {
-  let collection = [movieTheater[i].theater , movieTheater[i].genre]
+   collection = [movieTheater[i].theater , movieTheater[i].genre]
   if (collection[1]==='Comedy'){
  console.log(collection[0]);}
 }
-
+console.log(collection)
 /********************** Exercise 3 ***********************/
 
 let arrayNumbers = [0, 7, 10, 12, 13, 20, 23, 27, 30, 60, 67, 88];
@@ -120,14 +121,14 @@ let arrayWords = [
 
 //Use a loop to log this to the console as one string.
 
-let sentence= ""
+let sentence= []
 
 for (let i=0; i<arrayWords.length; i++) {
   sentence+=arrayWords[i]
   if( i < arrayWords.length -1) {
     sentence += ' '
   }
-
+  
 }
 console.log(sentence)
 
@@ -142,9 +143,32 @@ console.log(sentence)
 // Now use an if/else statement to change the output depending on whether you've read it yet or not. If you've read it, log a string: 'You already read "The Hobbit" by J.R.R. Tolkien'; if not, log a string: 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
 
 
+let bookArray = [
+  {title: 'To Kill a Mockingbird',
+  author: 'Harper Lee',
+  alreadyRead: true
+},
+{
+  title: 'Touching Spirit Bear',
+  author: 'Ben Mikaelsen',
+  alreadyRead: true
+},
+{
+  title: 'The Wisdom of Wolves',
+  author: 'Jim & Jamie Dutcher',
+  alreadyRead: false
+},
+{
+  title: 'A Long Walk Down a Winding Road',
+  author: 'Sam Farmer',
+  alreadyRead: false
+}
+]
 
 
+for (let i = 0; i<bookArray.length; i++) {
 
+}
 
 /********************** Exercise 6 ***********************/
 

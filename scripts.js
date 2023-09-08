@@ -83,13 +83,16 @@ let movieTheater = [
 
 // Loop through this collection to log to the console all of the theaters that are playing a comedy.
 let collection;
-
+let theaterComedy = [];
 for (let i=0; i<movieTheater.length; i++) {
    collection = [movieTheater[i].theater , movieTheater[i].genre]
   if (collection[1]==='Comedy'){
- console.log(collection[0]);}
+ theaterComedy= theaterComedy + collection[0] }
+  if( i < theaterComedy.length -1) {
+      theaterComedy += ' ' }
 }
-console.log(collection)
+
+console.log(theaterComedy)
 /********************** Exercise 3 ***********************/
 
 let arrayNumbers = [0, 7, 10, 12, 13, 20, 23, 27, 30, 60, 67, 88];
@@ -100,8 +103,7 @@ let arrayNumbers = [0, 7, 10, 12, 13, 20, 23, 27, 30, 60, 67, 88];
 
 for(let i=0; i<arrayNumbers.length; i++) {
   if(arrayNumbers[i]%10 === 0){
-    console.log(arrayNumbers[i])
-  }
+    console.log(arrayNumbers[i])}
 }
 
 /********************** Exercise 4 ***********************/
@@ -165,10 +167,13 @@ let bookArray = [
 }
 ]
 
-
+let bookIntro="";
 for (let i = 0; i<bookArray.length; i++) {
+bookIntro += (`${bookArray[i].title} by ${bookArray[i].author}\n`)
 
 }
+
+console.log(bookIntro)
 
 /********************** Exercise 6 ***********************/
 

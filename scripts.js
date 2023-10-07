@@ -4,7 +4,9 @@
 
 // Log the magazineEditors array when you're done to make sure you got it!
 
-let magazineEditors = [];
+let magazineEditors = [
+  
+];
 let magazines = [
   {
     name: "Variety",
@@ -32,7 +34,7 @@ let magazines = [
   },
 ];
 
-
+console.log(magazineEditors)
 
 
 

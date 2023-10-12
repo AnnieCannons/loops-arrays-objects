@@ -78,6 +78,11 @@ let movieTheater = [
     movieName: "Star Wars",
     duration: 140,
     genre: "Action",
+  },  {
+    theater: "Theater7",
+    movieName: "Identity Theft",
+    duration: 140,
+    genre: "Comedy",
   },
 ];
 

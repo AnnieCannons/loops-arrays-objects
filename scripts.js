@@ -92,8 +92,6 @@ for (let i = 0; i < movieTheater.length; i++) {
       }
 }
 
-
-console.log(collection)
 console.log(theaterComedy)
 /********************** Exercise 3 ***********************/
 

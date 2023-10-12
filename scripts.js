@@ -33,9 +33,12 @@ let magazines = [
 ];
 
 
+for (let i = 0; i < magazines.length; i += 1) {
+  magazineEditors[i] = magazines[i].editor //the .split and .join were not needed for this exercise 
 
+}
 
-
+console.log(magazineEditors)
 
 /********************** Exercise 2 ***********************/
 
@@ -79,22 +82,31 @@ let movieTheater = [
 ];
 
 // Loop through this collection to log to the console all of the theaters that are playing a comedy.
+let collection = [];
+let theaterComedy = [];
+for (let i = 0; i < movieTheater.length; i++) {
+  collection[i] = movieTheater[i].theater + ' ' +  movieTheater[i].genre.includes('Comedy');
+      if(collection[i].includes('true')) {
+        theaterComedy +=movieTheater[i].theater
+        theaterComedy += ' ' 
+      }
+}
 
 
-
-
-
-
+console.log(collection)
+console.log(theaterComedy)
 /********************** Exercise 3 ***********************/
 
 let arrayNumbers = [0, 7, 10, 12, 13, 20, 23, 27, 30, 60, 67, 88];
 
 // Loop through each of the elements in the array and only console log the numbers that are divisible by 10.
 
+//console.log(arrayNumbers)
 
-
-
-
+for (let i = 0; i < arrayNumbers.length; i++) {
+  if (arrayNumbers[i] % 10 === 0) {
+    console.log(arrayNumbers[i])}
+}
 
 /********************** Exercise 4 ***********************/
 
@@ -111,12 +123,18 @@ let arrayWords = [
   "question.",
 ];
 
-// Use a loop to log this to the console as one string.
+//Use a loop to log this to the console as one string.
 
+let sentence = []
 
+for (let i = 0; i < arrayWords.length; i++) {
+  sentence += arrayWords[i]
+  if (i < arrayWords.length - 1) {
+    sentence += ' '
+  }
 
-
-
+}
+console.log(sentence)
 
 /********************** BONUS EXERCISES ***********************/
 
@@ -129,9 +147,36 @@ let arrayWords = [
 // Now use an if/else statement to change the output depending on whether you've read it yet or not. If you've read it, log a string: 'You already read "The Hobbit" by J.R.R. Tolkien'; if not, log a string: 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
 
 
+let bookArray = [
+  {
+    title: 'To Kill a Mockingbird',
+    author: 'Harper Lee',
+    alreadyRead: true
+  },
+  {
+    title: 'Touching Spirit Bear',
+    author: 'Ben Mikaelsen',
+    alreadyRead: true
+  },
+  {
+    title: 'The Wisdom of Wolves',
+    author: 'Jim & Jamie Dutcher',
+    alreadyRead: false
+  },
+  {
+    title: 'A Long Walk Down a Winding Road',
+    author: 'Sam Farmer',
+    alreadyRead: false
+  }
+]
 
+let bookIntro="";
+for (let i = 0; i < bookArray.length; i++) {
+bookIntro += (`${bookArray[i].title} by ${bookArray[i].author}\n`)
 
+}
 
+console.log(bookIntro)
 
 /********************** Exercise 6 ***********************/
 
@@ -157,7 +202,7 @@ let eventSchedule = {
   Sunday: "Rest and relaxation day",
 };
 
-console.log("Weekly Event Schedule\n");
+//console.log("Weekly Event Schedule\n");
 
 // Log the schedule for each day of the week.
 

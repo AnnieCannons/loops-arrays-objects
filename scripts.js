@@ -34,7 +34,7 @@ let magazines = [
 
 
 for (let i = 0; i < magazines.length; i += 1) {
-  magazineEditors[i] = magazines[i].editor.split(',').join(',');
+  magazineEditors[i] = magazines[i].editor //the .split and .join were not needed for this exercise 
 
 }
 
@@ -82,17 +82,18 @@ let movieTheater = [
 ];
 
 // Loop through this collection to log to the console all of the theaters that are playing a comedy.
-let collection;
+let collection = [];
 let theaterComedy = [];
 for (let i = 0; i < movieTheater.length; i++) {
-  collection = [movieTheater[i].theater, movieTheater[i].genre]
-  if (collection[1] === 'Comedy') {
-    theaterComedy= theaterComedy + collection[0] }
-  if( i < theaterComedy.length -1) {
-      theaterComedy += ' ' 
-  }
+  collection[i] = movieTheater[i].theater + ' ' +  movieTheater[i].genre.includes('Comedy');
+      if(collection[i].includes('true')) {
+        theaterComedy +=movieTheater[i].theater
+        theaterComedy += ' ' 
+      }
 }
 
+
+console.log(collection)
 console.log(theaterComedy)
 /********************** Exercise 3 ***********************/
 

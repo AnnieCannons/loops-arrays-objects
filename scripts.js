@@ -124,12 +124,12 @@ let arrayWords = [
 ];
 
 // Use a loop to log this to the console as one string.
-
-
-for(let i=0;i<arrayWords.length;i++){
-  console.log(arrayWords[i])
+let resultString = "";
+for (let i = 0; i < arrayWords.length; i++) {
+  resultString += arrayWords[i] + " ";
 }
 
+console.log(resultString.trim());
 
 
 /********************** BONUS EXERCISES ***********************/

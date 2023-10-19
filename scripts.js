@@ -32,7 +32,11 @@ let magazines = [
   },
 ];
 
+for (let i=0;i < magazines.length;i++){
+  magazineEditors.push(magazines[i].editor);
+}
 
+console.log(magazineEditors)
 
 
 
@@ -80,7 +84,11 @@ let movieTheater = [
 
 // Loop through this collection to log to the console all of the theaters that are playing a comedy.
 
-
+for(let i=0;i<movieTheater.length;i++){
+  if(movieTheater[i].genre==='Comedy'){
+    console.log(movieTheater[i].theater)
+  }
+}
 
 
 
@@ -91,7 +99,11 @@ let arrayNumbers = [0, 7, 10, 12, 13, 20, 23, 27, 30, 60, 67, 88];
 
 // Loop through each of the elements in the array and only console log the numbers that are divisible by 10.
 
-
+for(let i=0;i<arrayNumbers.length;i++){
+  if(arrayNumbers[i]%10===0){
+    console.log(arrayNumbers[i])
+  }
+}
 
 
 
@@ -112,10 +124,12 @@ let arrayWords = [
 ];
 
 // Use a loop to log this to the console as one string.
+let resultString = "";
+for (let i = 0; i < arrayWords.length; i++) {
+  resultString += arrayWords[i] + " ";
+}
 
-
-
-
+console.log(resultString.trim());
 
 
 /********************** BONUS EXERCISES ***********************/
@@ -128,7 +142,32 @@ let arrayWords = [
 
 // Now use an if/else statement to change the output depending on whether you've read it yet or not. If you've read it, log a string: 'You already read "The Hobbit" by J.R.R. Tolkien'; if not, log a string: 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
 
-
+let novels =[
+  {
+    title:"Coldest Winter Ever ",
+    author:'Sista Soulja ',
+    alreadyRead:true
+  },
+  {
+    title:'Midnight',
+    author:"Sista Soulja",
+    alreadyRead:false
+  },
+  {
+    title:'Life After Death',
+    author:"Sista Soulja ",
+    alreadyRead:true
+  }
+];
+for(let i=0;i<novels.length;i++){
+  let novel = novels[i];
+  let novelInfo = `"${novel.title}" by ${novel.author}`;
+  if (novel.alreadyRead){
+    console.log(`you already read ${novelInfo}.`)
+  }else{
+    console.log(`you still need to read ${novelInfo}.`)
+  }
+}
 
 
 
@@ -160,7 +199,11 @@ let eventSchedule = {
 console.log("Weekly Event Schedule\n");
 
 // Log the schedule for each day of the week.
-
+for(let i = 0;i<daysOfWeek.length;i++){
+  let day = daysOfWeek[i];
+  let event = eventSchedule[day];
+  console.log(`${day}: ${event}`);
+}
 
 
 
@@ -175,9 +218,13 @@ let totalScore = 0;
 
 // Your for loop here
 
+for(let i = 0;i<scores.length;i++){
+  totalScore+= scores[i]
 
+}
 
 
 
 
 let averageScore = totalScore / scores.length;
+console.log("Average Score:" + averageScore)

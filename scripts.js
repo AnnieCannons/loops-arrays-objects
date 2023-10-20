@@ -85,17 +85,11 @@ let movieTheater = [
 
 // Loop through this collection to log to the console all of the theaters that are playing a comedy.
 
-let comedies = [];
-
-for (i = 0; i < movieTheater.length; i++) {
-
-if (movieTheater[i].genre === "Comedy")
-comedies.push(movieTheater[i]);
-
-
+for (let movie of movieTheater) {
+  if (movie.genre === "Comedy") {
+    console.log(movie.theater);
+  }
 };
-console.log(comedies);
-
 
 
 

@@ -37,6 +37,25 @@ let magazines = [
 
 
 
+for (i = 0; i < magazines.length; i++) {
+  let allMagazineEditors = magazines[i].editor;
+  magazineEditors.push(allMagazineEditors);
+};
+
+console.log(magazineEditors);
+
+
+
+
+
+
+
+
+
+
+
+
+
 /********************** Exercise 2 ***********************/
 
 let movieTheater = [
@@ -78,7 +97,32 @@ let movieTheater = [
   },
 ];
 
+
+
 // Loop through this collection to log to the console all of the theaters that are playing a comedy.
+
+
+let theatersPlayingComedies = [];
+ for(let movie of movieTheater) {
+  if (movie.genre === "Comedy") {
+    console.log(movie.theater);
+  };
+ };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -90,6 +134,34 @@ let movieTheater = [
 let arrayNumbers = [0, 7, 10, 12, 13, 20, 23, 27, 30, 60, 67, 88];
 
 // Loop through each of the elements in the array and only console log the numbers that are divisible by 10.
+
+let divisibleByTen = [];
+for (i = 0; i < arrayNumbers.length; i++) {
+  let allNumbers = arrayNumbers[i];
+  if (allNumbers % 10 === 0) {
+    divisibleByTen.push(allNumbers);
+  };
+};
+ console.log(divisibleByTen);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -112,6 +184,43 @@ let arrayWords = [
 ];
 
 // Use a loop to log this to the console as one string.
+
+
+
+let singleString = "";
+ for(i = 0; i < arrayWords.length; i++) {
+  singleString = singleString + arrayWords[i];
+};
+
+console.log(singleString);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
